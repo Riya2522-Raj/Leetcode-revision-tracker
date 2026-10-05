@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeetCode Revision Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeetCode Revision Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>LeetCode Revision Tracker</h1>
+        <p>Track your coding practice and revision.</p>
+    </header>
+
+    <section class="dashboard">
+        <div class="card">
+            <h3>Total Questions</h3>
+            <p id="total">0</p>
+        </div>
+        <div class="card">
+            <h3>Solved Questions</h3>
+            <p id="solved">0</p>
+        </div>
+        <div class="card">
+    <h3>Daily Streak 🔥</h3>
+    <p id="streakCount">0 Days</p>
+        </div>
+        <div class="card">
+    <h3>Revision Status 📚</h3>
+    <p id="revisionStatus">No Revision Due</p>
+</div>
+<div class="card topic-progress-card">
+    <h3>Topic-wise Progress 📊</h3>
+    <div id="topicProgress"></div>
+</div>
+<div class="card difficulty-progress-card">
+    <h3>Difficulty-wise Progress 📈</h3>
+    <div id="difficultyProgress"></div>
+</div>
+<div class="card achievement-card">
+    <h3>Achievements 🏆</h3>
+    <div id="achievements"></div>
+</div>
+        <div class="card">
+            <h3>Pending Questions</h3>
+            <p id="pending">0</p>
+        </div>
+    </section>
+    <section class="progress-section">
+    <h2>My Progress</h2>
+    <p id="progressText">0% Completed</p>
+    <div class="progress-bar">
+        <div id="progressFill"></div>
+    </div>
+</section>
+    <section class="question-section">
+    <h2>Add a Coding Question</h2>
+
+    <form id="questionForm">
+        <input
+            type="text"
+            id="questionName"
+            placeholder="Enter question name"
+            required
+        >
+
+        <select id="difficulty">
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Hard</option>
+        </select>
+
+        <input
+            type="text"
+            id="topic"
+            placeholder="Topic (e.g. Arrays)"
+            required
+        >
+        <label for="revisionDate">Next Revision Date:</label>
+<input type="date" id="revisionDate">
+
+        <button type="submit">Add Question</button>
+    </form>
+</section>
+<section class="question-section">
+    <h2>My Questions</h2>
+    <div class="filters">
+    <select id="topicFilter">
+        <option value="all">All Topics</option>
+    </select>
+
+    <select id="difficultyFilter">
+        <option value="all">All Difficulties</option>
+        <option value="Easy">Easy</option>
+        <option value="Medium">Medium</option>
+        <option value="Hard">Hard</option>
+    </select>
+    <select id="statusFilter">
+    <option value="all">All Statuses</option>
+    <option value="solved">Solved</option>
+    <option value="pending">Pending</option>
+</select>
+</div>
+<div class="search-box">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search questions by name..."
+    >
+</div>
+    <div id="questionList"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
